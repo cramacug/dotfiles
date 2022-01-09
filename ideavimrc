@@ -1,5 +1,11 @@
 source ~/.vimrc
 
+" Vim always win!
+" sethandler n:vim i:vim == a:vim
+" Use vim shortcuts instead IDE"
+" https://github.com/JetBrains/ideavim/wiki/sethandler "
+sethandler a:vim
+
 " *************************************************************************
 " Plugins
 " *************************************************************************
@@ -10,8 +16,8 @@ set ideajoin
 
 " Copy to system clipboard as well
 " ................................................
-set clipboard+=unnamed
-set clipboard+=ideaput
+set clipboard+=unnamed,autoselect,ideaput
+" set clipboard=unnamed,exclude:cons\|mac,unnamed,ideaput
 
 " Surround text
 " ................................................
@@ -54,8 +60,8 @@ map <leader>mb :action XDebugger.MuteBreakpoints<CR>
 map <leader>a :action Annotate<CR>
 map <leader>h :action Vcs.ShowTabbedFileHistory<CR>
 
-noremap ,g :action FindInPath<CR>
-noremap ,s :action FileStructurePopup<CR>
+" noremap ,g :action FindInPath<CR>
+" noremap ,s :action FileStructurePopup<CR>
 
 " ReformatCode
 " ................................................
@@ -72,7 +78,10 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gb :action JumpToLastChange<CR>
 
-
+" map zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
+" map <leader> za :action
+" CollapseRegion
+" ExpandRegion
 
 " map <leader>c :action Stop<CR>
 " nnoremap cc :action CommentByLineComment<CR>

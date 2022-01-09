@@ -155,5 +155,6 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=nu
 export PATH=~/.homebrew/bin/:$PATH
 export PATH=~/.homebrew/opt/ncurses/bin:$PATH
 export PATH=~/.homebrew/opt/ncurses/bin:$PATH
+#
 # Java JDK 1.8
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)

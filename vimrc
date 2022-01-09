@@ -80,6 +80,11 @@ Plug 'maxbrunsfeld/vim-yankstack'
 " https://github.com/tpope/vim-surround
 Plug 'tpope/vim-surround'
 
+" =============================================
+" Surround
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 call plug#end()
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

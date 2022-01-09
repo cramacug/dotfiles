@@ -29,11 +29,4 @@ let g:highlightedyank_highlight_duration = "1000"
 "   map y <Plug>(highlightedyank)
 " endif
 
-set wildmode=longest:full,full
-set scrolloff=8
-set sidescrolloff=8
-
-
-" Allow gf to open non-existent files
-map gf :edit <cfile><cr>
 

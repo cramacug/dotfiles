@@ -3,7 +3,7 @@
 " ========
 vnoremap <leader>y "*y
 nnoremap <leader>y "*y
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " =============================================
 " YANK UNTIL EOL
@@ -36,12 +36,23 @@ noremap <F4> :set nu! relativenumber!<CR>
 " Wrap/Unwrap
 nnoremap <F10> :set wrap! <CR>
 
+
 " =============================================
 " Center searches
 " ========
-nnoremap n nzz
-nnoremap N Nzz
+" Keep it centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
 nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+
+set scrolloff=8
+set sidescrolloff=8
+
+" =============================================
+" Allow gf to open non-existent files
+" ========
+map gf :edit <cfile><cr>
