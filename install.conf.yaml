@@ -1,0 +1,40 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+# iterm2.json
+
+- link:
+    ~/.config/htop/htoprc:
+      create: true
+      path: htoprc
+    ~/.ideavimrc:
+      create: true
+      path: ideavimrc
+    ~/.p10k.zsh:
+      create: true
+      path: p10k.zsh
+    ~/.tmux.conf:
+      create: true
+      path: tmux.conf
+    ~/.vim_config: 
+      create: true
+      path: vim_config
+    ~/.vimrc:
+      create: true
+      path: vimrc
+    ~/.zshrc:
+      create: true
+      path: zshrc
+
+# - create:
+#     - ~/downloads
+#     - ~/.vim/undo-history
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+
+
