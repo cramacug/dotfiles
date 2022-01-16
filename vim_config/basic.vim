@@ -231,9 +231,13 @@ map <leader>h :bprevious<cr>
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
+" map <leader>T :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
+
+" map <leader>> :tabmove +1<cr>
+" map <leader>< :tabmove -1<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -245,8 +249,18 @@ au TabLeave * let g:lasttab = tabpagenr()
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
+" map <leader>M :!git diff origin/main:%p: HEAD:%p: <cr>
+" map <leader>M :!echo %:p:h <cr>
+
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+" 'cd' towards the directory in which the current file is edited
+" " but only change the path for the current window
+"
+" nnoremap <leader>cd :lcd %:h<CR>:NERDTreeFind <cr>"
+"
+" nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
+" map <leader>nf :NERDTreeFind<cr>
 
 " Specify the behavior when switching between buffers 
 try
@@ -358,6 +372,7 @@ function! <SID>BufcloseCloseIt()
         new
     endif
 
+nnoremap <leader>E :action SearchEverywhere<CR>
     if buflisted(l:currentBufNum)
         execute("bdelete! ".l:currentBufNum)
     endif
@@ -383,3 +398,21 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+"
+""""""""""""""""""""""""""""""
+" => ZenCoding
+""""""""""""""""""""""""""""""
+" Enable all functions in all modes
+let g:user_zen_mode='a'
+
+""""""""""""""""""""""""""""""
+" => snipMate (beside <TAB> support <CTRL-j>)
+""""""""""""""""""""""""""""""
+ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
+snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
+
+""""""""""""""""""""""""""""""
+" => Vim grep
+""""""""""""""""""""""""""""""
+let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
+set grepprg=/bin/grep\ -nH

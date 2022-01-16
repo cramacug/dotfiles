@@ -17,10 +17,10 @@
 
 " TODO WIP - Highlight yank selection ---------
 " =============================================
-hi HighlightedyankRegion cterm=reverse gui=reverse
-let g:highlightedyank_highlight_color = "rgba(200, 200, 50, 100)"
-let g:highlightedyank_highlight_duration = 500
-let g:highlightedyank_highlight_duration = "1000"
+" hi HighlightedyankRegion cterm=reverse gui=reverse
+" let g:highlightedyank_highlight_color = "rgba(200, 200, 50, 100)"
+" let g:highlightedyank_highlight_duration = 500
+" let g:highlightedyank_highlight_duration = "1000"
 
 " https://github.com/machakann/vim-highlightedyank/issues/36
 " highlight HighlightedyankRegion cterm=reverse gui=reverse

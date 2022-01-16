@@ -43,7 +43,7 @@ nnoremap <F10> :set wrap! <CR>
 " Keep it centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap J mzJ`z
+" nnoremap J mzJ`z
 nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
@@ -56,3 +56,4 @@ set sidescrolloff=8
 " Allow gf to open non-existent files
 " ========
 map gf :edit <cfile><cr>
+map gd :edit <cfile><cr>

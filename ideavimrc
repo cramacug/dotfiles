@@ -42,6 +42,8 @@ let mapleader=","
 " Rename
 " ................................................
 map <leader>R :action RenameElement<CR>
+map <leader>R :action RenameElement<CR>
+
 
 " Run and debugging
 " ................................................
@@ -54,11 +56,11 @@ map <leader>bm :action ToggleBreakpointEnabled<CR>
 " Mute all Breakpoints
 map <leader>mb :action XDebugger.MuteBreakpoints<CR>
 
-
 " VCS Git actions
 " ................................................
-map <leader>a :action Annotate<CR>
-map <leader>h :action Vcs.ShowTabbedFileHistory<CR>
+map <leader>A :action Annotate<CR>
+map <leader>H :action Vcs.ShowTabbedFileHistory<CR>
+map <leader>M :action Git.CompareWithBranch<CR>
 
 " noremap ,g :action FindInPath<CR>
 " noremap ,s :action FileStructurePopup<CR>
@@ -78,6 +80,21 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gb :action JumpToLastChange<CR>
 
+nnoremap <leader>u :action FindUsages<CR>
+
+" MRU (Most Recent Uses) & Navigation
+" ................................................
+map <leader>f :action GotoClass<CR>
+map <leader>F :action GotoFile<CR>
+
+nnoremap <leader>a :action GotoAction<CR>
+nnoremap <leader>e :action RecentFiles<CR>
+" nnoremap <leader>E :action SearchEverywhere<CR>
+" nnoremap <leader>to :action CloseAllEditorsButActive<CR> is already in vimrc
+
+" Macros"
+let @d='diw"0P'
+
 " map zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
 " map <leader> za :action
 " CollapseRegion
@@ -88,11 +105,20 @@ nnoremap gb :action JumpToLastChange<CR>
 " vnoremap cc :action CommentByLineComment<CR>
 " nnoremap <C-CR> :action ShowIntentionActions<CR>
 
-" nnoremap ,a :action GotoAction<CR>
-" nnoremap ,e :action SearchEverywhere<CR>
-" vnoremap ,a :action GotoAction<CR>
-" nnoremap U :action FindUsages<CR>
+" Extract and inline variables, parameters, methods...
+" IntroduceVariable
+" ExtractFunction
+" Inline
+" IntroduceParameter
+" ................................................
+" vnoremap <leader>v :action IntroduceVariable<CR>
+" vnoremap <leader>m :action ExtractFunction<CR>
+" vnoremap <leader>i :action Inline<CR>
+" vnoremap <leader>p :action IntroduceParameter<CR>
 
-" nnoremap == :action ReformatCode<CR>
-" vnoremap == :action ReformatCode<CR>
-"
+
+" EditorSelectWord
+" EditorUnSelectWord
+" ................................................
+" nnoremap <leader>Up :action EditorSelectWord<CR>
+" nnoremap <leader>Down :action EditorUnSelectWord<CR>

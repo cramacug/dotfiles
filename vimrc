@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline-themes'
 " =============================================
 " FZF
 " https://github.com/junegunn/fzf/blob/master/README-VIM.md
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf'
 
 " =============================================
@@ -44,6 +45,11 @@ Plug 'preservim/nerdtree' |
             \ Plug 'ryanoasis/vim-devicons'
 " https://github.com/ryanoasis/vim-devicons
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"
+" =============================================
+" Git for NerdTree
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
 
 " =============================================
 " bufExplorer
@@ -81,13 +87,46 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-surround'
 
 " =============================================
-" Surround
-" https://github.com/airblade/vim-gitgutter
-Plug 'airblade/vim-gitgutter'
+
+" Autopairs
+" https://github.com/jiangmiao/auto-pairs
+Plug 'jiangmiao/auto-pairs'
+
+" Syntastic 
+" https://github.com/vim-syntastic/syntastic
+" Plug 'vim-syntastic/syntastic'
+
+" Vim coc
+" https://github.com/neoclide/coc.nvim
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+"  TreeSitter
+"  https://github.com/nvim-treesitter/nvim-treesitter
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 call plug#end()
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-source ~/.vim_config/plugins_config.vim
+
+source ~/.vim_config/vim_airline.vim
+source ~/.vim_config/grubvox.vim
+source ~/.vim_config/nerd_tree.vim
+source ~/.vim_config/mru.vim
+source ~/.vim_config/ctrlp.vim
+source ~/.vim_config/log_highlighting.vim
+source ~/.vim_config/fzf.vim
+source ~/.vim_config/rainbow_csv.vim
+source ~/.vim_config/buff_explorer.vim
+source ~/.vim_config/vim_commentary.vim
+source ~/.vim_config/yankstack.vim
+source ~/.vim_config/vim_surround.vim
+" source ~/.vim_config/treesitter.vim
+" source ~/.vim_config/syntastic.vim
+" source ~/.vim_config/coc_plugin.vim
+
 source ~/.vim_config/test_configs.vim
+
+
+
