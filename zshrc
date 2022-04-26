@@ -144,6 +144,7 @@ alias vimf='vim $(fzf)'
 alias pingg='ping www.google.com'
 
 # FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 #
 # p10K
@@ -158,3 +159,4 @@ export PATH=~/.homebrew/opt/ncurses/bin:$PATH
 #
 # Java JDK 1.8
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
