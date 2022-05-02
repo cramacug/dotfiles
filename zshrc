@@ -147,7 +147,7 @@ alias vimf='vim $(fzf)'
 # MISC
 alias pingg='ping www.google.com'
 alias today='date +%Y-%m-%d'
-alias todayS='date +%Y-%m-%d_T_%H:%M:%S'
+alias todayISO='date -Iseconds'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
