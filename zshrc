@@ -123,17 +123,21 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ### @@@@@ My Aliases @@@@ ###
 # alias ll='ls -lXh'
-alias ll='ls -lh'
+alias ll='ls -lhH'
 
 alias mv='mv -v'
 alias cp='cp -v'
 #
 # Git
 alias gdol='git diff "origin/$(git branch --show-current)" $(git branch --show-current)'
+alias gCOM='git ls-tree --full-tree -r --name-only HEAD | fzf | (read file; git diff HEAD:$file origin/master:$file)'
 
 # Python
 alias cvenv='python3 -m venv .venv'
 alias avenv='source .venv/bin/activate'
+
+# Docker
+alias cleanDocker='docker ps $(docker ps -a -q)'
 
 # Set vim as default editor
 export VISUAL=vim
@@ -142,10 +146,13 @@ alias vimf='vim $(fzf)'
 
 # MISC
 alias pingg='ping www.google.com'
+alias today='date +%Y-%m-%d'
+alias todayS='date +%Y-%m-%d_T_%H:%M:%S'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #
 # p10K
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
