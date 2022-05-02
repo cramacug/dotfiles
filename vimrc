@@ -1,3 +1,6 @@
+" Use interactive shell
+set shellcmdflag=-ic
+
 source ~/.vim_config/basic.vim
 source ~/.vim_config/basic_cramacug.vim
 
@@ -127,6 +130,5 @@ source ~/.vim_config/vim_surround.vim
 " source ~/.vim_config/coc_plugin.vim
 
 source ~/.vim_config/test_configs.vim
-
 
 
