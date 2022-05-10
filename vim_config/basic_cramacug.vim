@@ -57,3 +57,8 @@ set sidescrolloff=8
 " ========
 map gf :edit <cfile><cr>
 map gd :edit <cfile><cr>
+
+
+" Delay of vim to check the file
+set updatetime=100
+
