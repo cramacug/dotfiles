@@ -165,5 +165,8 @@ export PATH=~/.homebrew/opt/ncurses/bin:$PATH
 export PATH=~/.homebrew/opt/ncurses/bin:$PATH
 #
 # Java JDK 1.8
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# Java JDK 11
+# export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+# Java JDK 17
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
