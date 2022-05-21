@@ -95,7 +95,10 @@ nnoremap <leader>e :action RecentFiles<CR>
 " Macros"
 let @d='diw"0P'
 
-" map zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
+" Plug 'vim-scripts/ReplaceWithRegister'
+
+
+"  zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
 " map <leader> za :action
 " CollapseRegion
 " ExpandRegion

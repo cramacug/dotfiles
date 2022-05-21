@@ -220,7 +220,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+" map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <leader>bd :Bclose<cr>
 
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
@@ -232,7 +233,8 @@ map <leader>h :bprevious<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 " map <leader>T :tabonly<cr>
-map <leader>tc :tabclose<cr>
+" map <leader>tc :tabclose<cr>
+map <leader>tc :Bclose<cr>:tabclose<cr>gT
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
 
