@@ -74,11 +74,15 @@ vnoremap == :action ReformatCode<CR>
 " ................................................
 " --> COMMAND + b
 nnoremap gd :action GotoDeclaration<CR>
+" map gd <Action>(GotoDeclaration)
 " --> COMMAND + SHIFT +  b
 nnoremap gi :action GotoImplementation<CR>
 " --> COMMAND + u
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gb :action JumpToLastChange<CR>
+
+" --> Like hoover the mouse on error
+map gh <Action>(ShowErrorDescription)
 
 nnoremap <leader>u :action FindUsages<CR>
 

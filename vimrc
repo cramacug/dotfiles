@@ -110,7 +110,8 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'PhilRunninger/nerdtree-visual-selection'
 
-
+" ReplaceWithRegister
+Plug 'vim-scripts/ReplaceWithRegister'
 " Plug 'easymotion/vim-easymotion'
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 call plug#end()

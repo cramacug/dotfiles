@@ -2,7 +2,7 @@
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos="left"
-let g:NERDTreeWinSize=80
+let g:NERDTreeWinSize=60
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 map <leader>nn :NERDTreeToggle<cr>
