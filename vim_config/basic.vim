@@ -226,8 +226,8 @@ map <leader>bd :Bclose<cr>
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+" map <leader>l :bnext<cr>
+" map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -238,6 +238,8 @@ map <leader>tc :Bclose<cr>:tabclose<cr>gT
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
 
+map <leader>l gt<cr>
+map <leader>h gT<cr>
 " map <leader>> :tabmove +1<cr>
 " map <leader>< :tabmove -1<cr>
 

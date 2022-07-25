@@ -101,8 +101,7 @@ let @d='diw"0P'
 
 " Plug 'vim-scripts/ReplaceWithRegister'
 
-
-"  zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
+" zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
 " map <leader> za :action
 " CollapseRegion
 " ExpandRegion
@@ -129,3 +128,19 @@ let @d='diw"0P'
 " ................................................
 " nnoremap <leader>Up :action EditorSelectWord<CR>
 " nnoremap <leader>Down :action EditorUnSelectWord<CR>
+
+
+" actions
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+" nmap <leader>bd <action>(CloseEditor)
+" nmap <leader>i <action>(Generate)
+" nmap <leader>m <action>(Git.Menu)
+" nmap <leader>s <action>(QuickChangeScheme)
+" nmap <leader>/ <action>(ShowErrorDescription)
+" nmap <leader>e <action>(GotoNextError)
+" nnoremap <leader><leader> <C-Tab>
+
+" set NERDTree
+" let g:NERDTreeMapActivateNode='l'
+" let g:NERDTreeMapJumpParent='h'
