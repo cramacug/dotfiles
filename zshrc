@@ -145,15 +145,14 @@ alias cleanDocker='docker ps $(docker ps -a -q)'
 # Set vim as default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
-alias vimf='vim $(fzf)'
+# alias vimf='vim $(fzf)'
 
 # MISC
 alias pingg='ping www.google.com'
 alias today='date +%Y-%m-%d'
-alias todayISO='date -Iseconds'
+alias todaysISO='date -Iseconds'
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #
@@ -166,10 +165,36 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=nu
 export PATH=~/.homebrew/bin/:$PATH
 export PATH=~/.homebrew/opt/ncurses/bin:$PATH
 export PATH=~/.homebrew/opt/ncurses/bin:$PATH
-#
+
 # Java JDK 1.8
 # export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-# Java JDK 11
 # export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-# Java JDK 17
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+#
+# JAVA 1.8_252_09_01
+# export PATH="$HOME/Library/Java/JavaVirtualMachines/amazon-corretto-8_252_09_01/Contents/Home/bin:$PATH"
+# JAVA 1.8.0_322
+# export PATH="$HOME/Library/Java/JavaVirtualMachines/corretto-1.8.0_322/Contents/Home/bin:$PATH"
+# Java JDK 11.0.15
+# export PATH="$HOME/Library/Java/JavaVirtualMachines/corretto-11.0.15/Contents/Home/bin:$PATH" 
+export PATH="$HOME/Library/Java/JavaVirtualMachines/corretto-11.0.16/Contents/Home/bin:$PATH" 
+
+# @@@@@@@ DEXMA STUFF @@@@@@@ 
+# @@@@@@@ DEXMA STUFF @@@@@@@ 
+# @@@@@@@ DEXMA STUFF @@@@@@@ 
+# export PATH="$HOME/Software/maven/apache-maven-3.6.3/bin:$PATH"
+export PATH="$HOME/Software/maven/apache-maven-3.8.6/bin:$PATH"
+export PATH="$HOME/Software/gcloud/google-cloud-sdk/bin:$PATH"
+export PATH="$HOME/Software/opt/node/node-v12.14.1-darwin-x64/bin:$PATH"
+# Dexma render template
+# alias render-template='docker run -v $(pwd):/app -w /app gcr.io/divine-aegis-105709/dexmatech/render_template_cli'
+# alias render-template='docker run -v /Users/developer:/home -w /home/git/$(basename $(pwd)) gcr.io/divine-aegis-105709/dexmatech/render_template_cli DEST_PATH=/home/dexma'
+#                        docker run -v /root/path/where/repository/is:/app -w /app gcr.io/divine-aegis-105709/dexmatech/render_template_cli
+#                      $ docker run -v /Users/jsensada:/home -w /home/git/cloudf_spike gcr.io/divine-aegis-105709/dexmatech/render_template_cli DEST_PATH=/home
+# alias render-template="docker run -v $HOME/Dexma/etc:/app -w /Users/marccg/IdeaProjects/$(basename $(pwd)) gcr.io/divine-aegis-105709/dexmatech/render_template_cli DEST_PATH=$HOME/Dexma/etc/"
+alias render-template="docker run -v $(pwd):/app -v /Users/marccg/Dexma/tmp/render_template_files:/home -w /app gcr.io/divine-aegis-105709/dexmatech/render_template_cli DEST_PATH=/home"
+
+export PATH="$HOME/.homebrew/opt/postgresql@13/bin:$PATH"
+export PATH="$HOME/.homebrew/opt/libressl/bin:$PATH"
+export PATH="$HOME/.homebrew/opt/icu4c/bin:$PATH"
+export PATH="$HOME/.homebrew/opt/icu4c/sbin:$PATH"
+
