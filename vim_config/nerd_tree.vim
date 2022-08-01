@@ -2,7 +2,7 @@
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos="left"
-let g:NERDTreeWinSize=60
+let g:NERDTreeWinSize=80
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 map <leader>nn :NERDTreeToggle<cr>
@@ -12,6 +12,12 @@ map <leader>nf :NERDTreeFind<cr>
 " NerdTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+
+" Enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
 
 " NERDTree open default
 " autocmd vimenter * NERDTree
