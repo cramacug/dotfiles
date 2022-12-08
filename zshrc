@@ -127,10 +127,13 @@ alias ll='ls -lhH'
 
 alias mv='mv -v'
 alias cp='cp -v'
-#
+
 # Git
 alias gdol='git diff "origin/$(git branch --show-current)" $(git branch --show-current)'
 alias gCOM='git ls-tree --full-tree -r --name-only HEAD | fzf | (read file; git diff HEAD:$file origin/master:$file)'
+
+#vim
+alias vimf='vim $(fzf)'
 
 # Python
 alias cvenv='python3 -m venv .venv'
