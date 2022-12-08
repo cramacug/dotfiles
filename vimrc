@@ -113,6 +113,8 @@ Plug 'PhilRunninger/nerdtree-visual-selection'
 " ReplaceWithRegister
 Plug 'vim-scripts/ReplaceWithRegister'
 " Plug 'easymotion/vim-easymotion'
+
+Plug 'christoomey/vim-tmux-navigator'
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 call plug#end()
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,6 +132,7 @@ source ~/.vim_config/buff_explorer.vim
 source ~/.vim_config/vim_commentary.vim
 source ~/.vim_config/yankstack.vim
 source ~/.vim_config/vim_surround.vim
+source ~/.vim_config/vim_tmux_navigator.vim
 " source ~/.vim_config/treesitter.vim
 " source ~/.vim_config/syntastic.vim
 " source ~/.vim_config/coc_plugin.vim
