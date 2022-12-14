@@ -51,7 +51,7 @@ map <leader>r :action Run<CR>
 map <leader>d :action Debug<CR>
 " Add a BreaKpoint
 map <leader>bk :action ToggleLineBreakpoint<CR>
-" Mute all breakpoints
+" Mute a breakpoints
 map <leader>mb :action ToggleBreakpointEnabled<CR>
 " Mute all Breakpoints
 map <leader>mab :action XDebugger.MuteBreakpoints<CR>
