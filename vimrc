@@ -99,6 +99,11 @@ Plug 'jiangmiao/auto-pairs'
 " https://github.com/vim-syntastic/syntastic
 " Plug 'vim-syntastic/syntastic'
 
+" ALE
+" https://github.com/dense-analysis/ale
+Plug 'dense-analysis/ale'
+
+
 " Vim coc
 " https://github.com/neoclide/coc.nvim
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
