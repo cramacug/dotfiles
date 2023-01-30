@@ -198,3 +198,5 @@ export PATH="$HOME/.homebrew/opt/libressl/bin:$PATH"
 export PATH="$HOME/.homebrew/opt/icu4c/bin:$PATH"
 export PATH="$HOME/.homebrew/opt/icu4c/sbin:$PATH"
 
+
+source /Users/marccg/.docker/init-zsh.sh || true # Added by Docker Desktop
