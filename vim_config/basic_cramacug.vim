@@ -59,13 +59,6 @@ map gf :edit <cfile><cr>
 map gd :edit <cfile><cr>
 "
 " =============================================
-" Navigation of Tabs
-" !!! --> Collision with buffers
-" ========
-" map <leader>h gT
-" map <leader>l gt
-
-" =============================================
 " Navigation
 " ========
 map <leader>[ <C-^>
