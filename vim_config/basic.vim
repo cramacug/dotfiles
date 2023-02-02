@@ -238,14 +238,29 @@ map <leader>tc :Bclose<cr>:tabclose<cr>gT
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
 
+" =============================================
+" Navigation of Tabs
+" !!! --> Collision with buffers
+" ========
 map <leader>l gt<cr>
 map <leader>h gT<cr>
-" map <leader>> :tabmove +1<cr>
-" map <leader>< :tabmove -1<cr>
-
+map <leader>> :tabmove +1<cr>
+map <leader>< :tabmove -1<cr>
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+" noremap <leader>0 :tablast<cr>
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+nmap <Leader>0 :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
 
