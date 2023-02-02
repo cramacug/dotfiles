@@ -7,22 +7,30 @@ source ~/.vimrc
 sethandler a:vim
 
 " *************************************************************************
+" Map leader with comma --------------------------
+" *************************************************************************
+let mapleader=","
+
+" *************************************************************************
 " Plugins
 " *************************************************************************
-
+" ................................................
 " Use Idea to join lines smartly
 " ................................................
 set ideajoin
 
+" ................................................
 " Copy to system clipboard as well
 " ................................................
 set clipboard+=unnamed,autoselect,ideaput
 " set clipboard=unnamed,exclude:cons\|mac,unnamed,ideaput
 
+" ................................................
 " Surround text
 " ................................................
 set surround
 
+" ................................................
 " Comment text with gc
 " ................................................
 set commentary
@@ -33,31 +41,7 @@ set highlightedyank
 let g:highlightedyank_highlight_color = "rgba(200, 200, 50, 100)"
 let g:highlightedyank_highlight_duration = "1000"
 
-
-" *************************************************************************
-" Map leader with comma --------------------------
-" *************************************************************************
-let mapleader=","
-
-" Rename
 " ................................................
-map <leader>R :action RenameElement<CR>
-map <leader>R :action RenameElement<CR>
-
-
-" Run and debugging
-" ................................................
-map <leader>r :action Run<CR>
-map <leader>d :action Debug<CR>
-" Add a BreaKpoint
-map <leader>bk :action ToggleLineBreakpoint<CR>
-" Mute a breakpoints
-map <leader>mb :action ToggleBreakpointEnabled<CR>
-" Mute all Breakpoints
-map <leader>mab :action XDebugger.MuteBreakpoints<CR>
-
-
-
 " VCS Git actions
 " ................................................
 map <leader>A :action Annotate<CR>
@@ -67,12 +51,14 @@ map <leader>M :action Git.CompareWithBranch<CR>
 " noremap ,g :action FindInPath<CR>
 " noremap ,s :action FileStructurePopup<CR>
 
+" ................................................
 " ReformatCode
 " ................................................
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
 
-" Navigation
+" ................................................
+" Idea Navigation
 " ................................................
 " --> COMMAND + b
 "nnoremap gd :action GotoDeclaration<CR>
@@ -83,38 +69,62 @@ map gi <Action>(GotoImplementation)
 " --> COMMAND + u
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gb :action JumpToLastChange<CR>
-
-" --> Like hoover the mouse on error
-map gH <Action>(ShowErrorDescription)
-
-" --> Show available actions of IntelliJ
-map gh <Action>(ShowIntentionActions)
-
-nnoremap <leader>u :action FindUsages<CR>
-
+" ................................................
 " MRU (Most Recent Uses) & Navigation
 " ................................................
 map <leader>f :action GotoClass<CR>
 map <leader>F :action GotoFile<CR>
 
-nnoremap <leader>a :action GotoAction<CR>
-nnoremap <leader>e :action RecentFiles<CR>
-" nnoremap <leader>E :action SearchEverywhere<CR>
+" ................................................
+" Move along tabs and windows
+" ................................................
 " nnoremap <leader>to :action CloseAllEditorsButActive<CR> is already in vimrc
-
 " Overwrite window movements to avoid collision with vim/tmux plugin
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" ................................................
+" Idea/Mouse actions
+" ................................................
+" ................................................
+" Rename
+" ................................................
+map <leader>R :action RenameElement<CR>
+" ................................................
+" Run and debugging
+" ................................................
+map <leader>r :action Run<CR>
+map <leader>d :action Debug<CR>
+" Add a Breakpoint
+map <leader>bk :action ToggleLineBreakpoint<CR>
+" Mute a breakpoints
+map <leader>mb :action ToggleBreakpointEnabled<CR>
+" Mute all Breakpoints
+map <leader>mab :action XDebugger.MuteBreakpoints<CR>
 
+" ................................................
+" Idea suggestions
+" ................................................
+" --> Like hoover the mouse on error
+map gH <Action>(ShowErrorDescription)
+" --> Show available actions of IntelliJ
+map gh <Action>(ShowIntentionActions)
+" ................................................
+" Idea general actions
+" ................................................
+nnoremap <leader>u :action FindUsages<CR>
+nnoremap <leader>a :action GotoAction<CR>
+nnoremap <leader>e :action RecentFiles<CR>
+" nnoremap <leader>E :action SearchEverywhere<CR>
 
 " Macros"
 let @d='diw"0P'
 
 " Plug 'vim-scripts/ReplaceWithRegister'
-
 " zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
 " map <leader> za :action
 " CollapseRegion
@@ -145,8 +155,6 @@ let @d='diw"0P'
 
 
 " actions
-nmap <leader>h <action>(PreviousTab)
-nmap <leader>l <action>(NextTab)
 " nmap <leader>bd <action>(CloseEditor)
 " nmap <leader>i <action>(Generate)
 " nmap <leader>m <action>(Git.Menu)
