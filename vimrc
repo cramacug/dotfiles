@@ -95,6 +95,10 @@ Plug 'tpope/vim-surround'
 " https://github.com/jiangmiao/auto-pairs
 Plug 'jiangmiao/auto-pairs'
 
+" Vimfugitive
+" https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
+
 " Syntastic 
 " https://github.com/vim-syntastic/syntastic
 " Plug 'vim-syntastic/syntastic'
@@ -102,7 +106,6 @@ Plug 'jiangmiao/auto-pairs'
 " ALE
 " https://github.com/dense-analysis/ale
 Plug 'dense-analysis/ale'
-
 
 " Vim coc
 " https://github.com/neoclide/coc.nvim
@@ -117,8 +120,9 @@ Plug 'PhilRunninger/nerdtree-visual-selection'
 
 " ReplaceWithRegister
 Plug 'vim-scripts/ReplaceWithRegister'
-" Plug 'easymotion/vim-easymotion'
 
+" Navigate between panes of tmux and vim
+" https://github.com/christoomey/vim-tmux-navigator
 Plug 'christoomey/vim-tmux-navigator'
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 call plug#end()
@@ -141,6 +145,7 @@ source ~/.vim_config/vim_tmux_navigator.vim
 " source ~/.vim_config/treesitter.vim
 " source ~/.vim_config/syntastic.vim
 " source ~/.vim_config/coc_plugin.vim
+source ~/.vim_config/vim_fugitive.vim
 
 source ~/.vim_config/test_configs.vim
 

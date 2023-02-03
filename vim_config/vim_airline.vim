@@ -1,7 +1,9 @@
 """"""""""""""""""""""""""""""
 " => Airline
 """"""""""""""""""""""""""""""
-let g:airline_theme='badwolf'
+" :h airline
+" let g:airline_theme='badwolf'
+let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
 "
 """"""""""""""""""""""""""""""
@@ -20,5 +22,21 @@ let g:airline#extensions#tabline#fnamemod = ':t'       " disable file paths in t
 let g:airline#extensions#tabline#show_buffers = 0      " dont show buffers in the tabline
 let g:airline#extensions#tabline#tab_min_count = 1     " minimum of 2 tabs needed to display the tabline
 " let g:airline#extensions#tabline#show_splits = 0       " disables the buffer name that displays on the right of the tabline
-" let g:airline#extensions#tabline#show_tab_nr = 0       " disable tab numbers 
-" let g:airline#extensions#tabline#show_tab_type = 0     " disables the weird ornage arrow on the tabline
+let g:airline#extensions#tabline#show_tab_nr = 1       " disable tab numbers 
+let g:airline#extensions#tabline#tab_nr_type = 1 " # of splits (default)
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+" let g:airline#extensions#tabline#tab_nr_type = 2 " splits and tab number
+let g:airline#extensions#tabline#tabnr_formatter = 'tabnr'
+let g:airline#extensions#tabline#show_tab_type = 0     " disables the weird ornage arrow on the tabline
+
+" enable/disable fugitive/lawrencium integration >
+let g:airline#extensions#branch#enabled = 1
+" change the text for when no branch is detected >
+let g:airline#extensions#branch#empty_message = ''
+" define the order in which the branches of different vcs systems will be
+" displayed on the statusline (currently only for fugitive and lawrencium) >
+let g:airline#extensions#branch#vcs_priority = ["git", "mercurial"]
+" use vcscommand.vim if available >
+" let g:airline#extensions#branch#use_vcscommand = 0
+" truncate long branch names to a fixed length >
+let g:airline#extensions#branch#displayed_head_limit = 50
