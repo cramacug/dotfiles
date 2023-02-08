@@ -118,58 +118,48 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+### @@@@@ Custom configurations @@@@ ###
+# Load seperated config files
+########################################    
+for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
+  source "${conf}"
+done
+unset conf
+
+# p10K
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ### @@@@@ My Aliases @@@@ ###
 # alias ll='ls -lXh'
 alias ll='ls -lhH'
 
+# Verbose mv and cp commands
 alias mv='mv -v'
 alias cp='cp -v'
 
 # Git
 alias gdol='git diff "origin/$(git branch --show-current)" $(git branch --show-current)'
-alias gCOM='git ls-tree --full-tree -r --name-only HEAD | fzf | (read file; git diff HEAD:$file origin/master:$file)'
+alias gCOM='git ls-tree --full-tree -r --name-only HEAD | fzf | (read file; git diff HEAD:$file origin/main:$file)'
 
-#vim
+# Vim + fzf
 alias vimf='vim $(fzf)'
+# Set vim as default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# FZF
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Python
 alias cvenv='python3 -m venv .venv'
 alias avenv='source .venv/bin/activate'
 
-# Docker
-alias cleanDocker='docker ps $(docker ps -a -q)'
-
-# Set vim as default editor
-export VISUAL=vim
-export EDITOR="$VISUAL"
-alias vimf='vim $(fzf)'
-
 # MISC
 alias pingg='ping www.google.com'
 alias today='date +%Y-%m-%d'
 alias todayISO='date -Iseconds'
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#
-# p10K
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# @@@@@@@@@ CUSTOM PATHS  @@@@@@@@@ 
-# Homebrew
-export PATH=~/.homebrew/bin/:$PATH
-export PATH=~/.homebrew/opt/ncurses/bin:$PATH
-export PATH=~/.homebrew/opt/ncurses/bin:$PATH
-#
-# Java JDK 1.8
-# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-# Java JDK 11
-# export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-# Java JDK 17
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
