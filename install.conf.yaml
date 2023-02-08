@@ -7,18 +7,16 @@
 # iterm2.json
 
 - link:
-    ~/.config/htop/htoprc:
-      create: true
-      path: htoprc
     ~/.ideavimrc:
       create: true
       path: ideavimrc
-    ~/.p10k.zsh:
+    ~/.config/htop/htoprc:
       create: true
-      path: p10k.zsh
+      path: htoprc
     ~/.tmux.conf:
       create: true
       path: tmux.conf
+    # VIM
     ~/.vim/autoload: 
       create: true
       path: vim/autoload
@@ -28,9 +26,17 @@
     ~/.vimrc:
       create: true
       path: vim/vimrc
+    # ZSH
     ~/.zshrc:
       create: true
-      path: zshrc
+      path: zsh/zshrc
+    ~/.p10k.zsh:
+      create: true
+      path: zsh/p10k.zsh
+    ~/.config/zsh/config.d:
+      create: true
+      path: zsh/zsh_configs
+
 
 # - create:
 #     - ~/downloads
@@ -38,6 +44,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-
-
 
