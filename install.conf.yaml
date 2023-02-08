@@ -33,10 +33,18 @@
     ~/.p10k.zsh:
       create: true
       path: zsh/p10k.zsh
-    ~/.config/zsh/config.d:
+    ~/.config/zsh/config.d/common:
       create: true
-      path: zsh/zsh_configs
-
+      path: zsh/zsh_configs/common
+    ~/.config/zsh/config.d/macOS:
+      create: true
+      path: zsh/zsh_configs/macOS
+    ~/.config/zsh/config.d/linux:
+      create: true
+      path: zsh/zsh_configs/linux
+    # ~/.config/zsh/config.d/custom:
+    #   create: true
+    #   path: zsh/zsh_configs/custom
 
 # - create:
 #     - ~/downloads

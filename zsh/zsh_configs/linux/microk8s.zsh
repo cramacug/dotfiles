@@ -1,4 +1,5 @@
-
+alias test_config_microk8s='echo microk8s configuration successfully created'
+#
 # k8s
 alias k=kubectl
 
@@ -10,5 +11,6 @@ alias k=kubectl
 # alias kdel='microk8s kubectl delete -f'
 # alias klogs='microk8s kubectl logs'
 # source ~/.bash_aliases
+
 alias helm='microk8s helm'
 
