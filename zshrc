@@ -124,7 +124,17 @@ source $ZSH/oh-my-zsh.sh
 ### @@@@@ Custom configurations @@@@ ###
 # Load seperated config files
 ########################################    
-for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
+DIR="$HOME/.config/zsh/config.d"
+FILE="$DIR/defaut_test.zsh"
+if [ -f "$FILE"  ]; then
+    echo "$FILE exists."
+else
+    mkdir -p "${DIR}"
+    touch "$FILE"
+    echo "Default $FILE has been created"
+fi
+
+for conf in "$DIR/"*.zsh; do
   source "${conf}"
 done
 unset conf
