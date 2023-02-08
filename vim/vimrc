@@ -1,5 +1,5 @@
 " Use interactive shell
-set shellcmdflag=-ic
+" set shellcmdflag=-ic
 
 source ~/.vim_config/basic.vim
 source ~/.vim_config/basic_cramacug.vim
