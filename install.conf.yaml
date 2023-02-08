@@ -19,6 +19,9 @@
     ~/.tmux.conf:
       create: true
       path: tmux.conf
+    ~/.vim/autoload: 
+      create: true
+      path: vim/autoload
     ~/.vim_config: 
       create: true
       path: vim_config
