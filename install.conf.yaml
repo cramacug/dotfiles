@@ -24,10 +24,10 @@
       path: vim/autoload
     ~/.vim_config: 
       create: true
-      path: vim_config
+      path: vim/vim_config
     ~/.vimrc:
       create: true
-      path: vimrc
+      path: vim/vimrc
     ~/.zshrc:
       create: true
       path: zshrc
