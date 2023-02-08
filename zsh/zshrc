@@ -143,7 +143,7 @@ fi
 
 # Load Linux config files
 ########################################    
-if [[ "$ostype" == "linux" ]]
+if [[ "$ostype" == "Linux" ]]
 then
     for conf in "$HOME/.config/zsh/config.d/linux/"*.zsh; do
       source "${conf}"
