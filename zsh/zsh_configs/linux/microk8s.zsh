@@ -1,5 +1,5 @@
-alias test_config_microk8s='echo microk8s configuration successfully created'
-#
+alias test_config_linux="echo '$(date) :: microk8s configuration successfully created'"
+
 # k8s
 alias k=kubectl
 
