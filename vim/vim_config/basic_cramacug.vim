@@ -55,8 +55,10 @@ set sidescrolloff=8
 " =============================================
 " Allow gf to open non-existent files
 " ========
-map gf :edit <cfile><cr>
-map gd :edit <cfile><cr>
+" map gf :edit <cfile><cr>
+" map gd :edit <cfile><cr>
+map gf :tabe <cfile><cr>
+map gd :tabe <cfile><cr>
 "
 " =============================================
 " Navigation
