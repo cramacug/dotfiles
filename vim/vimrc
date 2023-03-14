@@ -105,7 +105,7 @@ Plug 'tpope/vim-fugitive'
 
 " ALE
 " https://github.com/dense-analysis/ale
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " Vim coc
 " https://github.com/neoclide/coc.nvim

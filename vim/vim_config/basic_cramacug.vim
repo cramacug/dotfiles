@@ -57,8 +57,8 @@ set sidescrolloff=8
 " ========
 " map gf :edit <cfile><cr>
 " map gd :edit <cfile><cr>
-map gf :tabe <cfile><cr>
-map gd :tabe <cfile><cr>
+map gf :tabe <cfile><CR>
+map gd :tabe <cfile><CR>
 "
 " =============================================
 " Navigation

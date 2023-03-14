@@ -19,3 +19,12 @@ vnoremap <leader>f :FZF<CR>
 nnoremap <leader>f :FZF<CR>
 vnoremap <leader>F :FZF<CR>
 nnoremap <leader>F :FZF<CR>
+
+" let g:fzf_action = { 'enter': 'tab split'  }
+
+" This is the default extra key bindings
+let g:fzf_action = {
+            \ 'enter': 'tab split'  ,
+            \ 'ctrl-t': 'tab split',
+            \ 'ctrl-x': 'split',
+            \ 'ctrl-v': 'vsplit' }
