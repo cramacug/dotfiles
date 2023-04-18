@@ -82,6 +82,7 @@ map <leader>F :action GotoFile<CR>
 " Overwrite window movements to avoid collision with vim/tmux plugin
 nmap <leader>h <action>(PreviousTab)
 nmap <leader>l <action>(NextTab)
+
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h

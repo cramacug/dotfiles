@@ -36,7 +36,7 @@ au FocusGained,BufEnter * checktime
 let mapleader = ","
 
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>w :w!<CR>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -200,8 +200,8 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " map <space> /
 " map <C-space> ?
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" Disable highlight when <leader><CR> is pressed
+map <silent> <leader><CR> :noh<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -210,23 +210,21 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Close the current buffer
-" map <leader>bd :Bclose<cr>:tabclose<cr>gT
-map <leader>bd :Bclose<cr>
+" map <leader>bd :Bclose<CR>:tabclose<CR>gT
+map <leader>bd :Bclose<CR>
 
 " Close all the buffers
-map <leader>ba :bufdo bd<cr>
+map <leader>ba :bufdo bd<CR>
 
-" map <leader>l :bnext<cr>
-" map <leader>h :bprevious<cr>
+" map <leader>l :bnext<CR>
+" map <leader>h :bprevious<CR>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-" map <leader>T :tabonly<cr>
-" map <leader>tc :tabclose<cr>
-map <leader>tc :Bclose<cr>:tabclose<cr>gT
+map <leader>tn :tabnew<CR>
+map <leader>to :tabonly<CR>
+map <leader>tc :tabclose<CR>
+map <leader>tC :Bclose<CR>:tabclose<CR>gT
 map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
 
 " =============================================
 " Navigation of Tabs
@@ -234,8 +232,9 @@ map <leader>t<leader> :tabnext
 " ========
 map <leader>l gt<cr>
 map <leader>h gT<cr>
-map <leader>> :tabmove +1<cr>
-map <leader>< :tabmove -1<cr>
+
+map <leader>> :tabmove +1<CR>
+map <leader>< :tabmove -1<CR>
 " Go to tab by number
 noremap <leader>1 1gt
 noremap <leader>2 2gt
@@ -246,7 +245,7 @@ noremap <leader>6 6gt
 noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
-" noremap <leader>0 :tablast<cr>
+" noremap <leader>0 :tablast<CR>
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
@@ -256,20 +255,20 @@ au TabLeave * let g:lasttab = tabpagenr()
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+map <leader>te :tabedit <C-r>=expand("%:p:h")<CR>/
 
-" map <leader>M :!git diff origin/main:%p: HEAD:%p: <cr>
-" map <leader>M :!echo %:p:h <cr>
+" map <leader>M :!git diff origin/main:%p: HEAD:%p: <CR>
+" map <leader>M :!echo %:p:h <CR>
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+map <leader>cd :cd %:p:h<CR>:pwd<CR>
 " 'cd' towards the directory in which the current file is edited
 " " but only change the path for the current window
 "
-" nnoremap <leader>cd :lcd %:h<CR>:NERDTreeFind <cr>"
+" nnoremap <leader>cd :lcd %:h<CR>:NERDTreeFind <CR>"
 "
 " nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
-" map <leader>nf :NERDTreeFind<cr>
+" map <leader>nf :NERDTreeFind<CR>
 
 " Specify the behavior when switching between buffers 
 try
@@ -299,10 +298,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 map 0 ^
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nmap <M-j> mz:m+<CR>`z
+nmap <M-k> mz:m-2<CR>`z
+vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
@@ -329,7 +328,7 @@ endif
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+map <leader>ss :setlocal spell!<CR>
 
 " Shortcuts using <leader>
 map <leader>sn ]s
@@ -342,16 +341,16 @@ map <leader>s? z=
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+noremap <Leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+map <leader>q :e ~/buffer<CR>
 
 " Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<cr>
+map <leader>x :e ~/buffer.md<CR>
 
 " Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
+map <leader>pp :setlocal paste!<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -417,8 +416,8 @@ let g:user_zen_mode='a'
 """"""""""""""""""""""""""""""
 " => snipMate (beside <TAB> support <CTRL-j>)
 """"""""""""""""""""""""""""""
-ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
-snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
+ino <C-j> <C-r>=snipMate#TriggerSnippet()<CR>
+snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<CR>
 
 """"""""""""""""""""""""""""""
 " => Vim grep
