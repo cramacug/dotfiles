@@ -124,6 +124,11 @@ Plug 'vim-scripts/ReplaceWithRegister'
 " Navigate between panes of tmux and vim
 " https://github.com/christoomey/vim-tmux-navigator
 Plug 'christoomey/vim-tmux-navigator'
+
+" Kotlin Syntax
+" https://vimawesome.com/plugin/kotlin-vim
+Plug 'udalov/kotlin-vim'
+
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 call plug#end()
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
