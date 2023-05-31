@@ -26,15 +26,25 @@ set foldmethod=syntax
 " =============================================
 " FUNCTION KEYS
 " ========
-" --> F3
+
+" --> F1
+" --> F2
+" --> F3  :: Highlight the search
 set hlsearch!
 noremap <F3> :set hlsearch!<CR>
-" --> F4
+" --> F4  :: Show/hide realitive numbers
 set nu relativenumber
 noremap <F4> :set nu! relativenumber!<CR>
-"  -->F10
-" Wrap/Unwrap
+" --> F5
+" --> F6
+" --> F7
+" --> F8
+" --> F9
+" --> F10 :: Wrap/Unwrap
 nnoremap <F10> :set wrap! <CR>
+" --> F11
+" --> F12 :: Toogle paste when are importing text outside from the terminal
+:set pastetoggle=<F12>
 
 
 " =============================================
