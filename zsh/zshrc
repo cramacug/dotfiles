@@ -194,5 +194,6 @@ alias avenv='source .venv/bin/activate'
 
 # MISC
 alias pingg='ping www.google.com'
-alias today='date +%Y-%m-%d'
+alias today='date +%Y_%m_%d'
 alias todayISO='date -Iseconds'
+alias timeNow='date +%H_%M_%S'
