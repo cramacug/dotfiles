@@ -12,6 +12,7 @@
       path: ideavimrc
     ~/.config/htop/htoprc:
       create: true
+      force: true
       path: htoprc
     ~/.tmux.conf:
       create: true
@@ -19,28 +20,36 @@
     # VIM
     ~/.vim/autoload: 
       create: true
+      force: true
       path: vim/autoload
     ~/.vim_config: 
       create: true
+      force: true
       path: vim/vim_config
     ~/.vimrc:
       create: true
+      force: true
       path: vim/vimrc
     # ZSH
     ~/.zshrc:
       create: true
+      force: true
       path: zsh/zshrc
     ~/.p10k.zsh:
       create: true
+      force: true
       path: zsh/p10k.zsh
     ~/.config/zsh/config.d/common:
       create: true
+      force: true
       path: zsh/zsh_configs/common
     ~/.config/zsh/config.d/macOS:
       create: true
+      force: true
       path: zsh/zsh_configs/macOS
     ~/.config/zsh/config.d/linux:
       create: true
+      force: true
       path: zsh/zsh_configs/linux
     # ~/.config/zsh/config.d/custom:
     #   create: true
