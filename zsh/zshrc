@@ -198,3 +198,7 @@ alias pingg='ping www.google.com'
 alias today='date +%Y_%m_%d'
 alias todayISO='date -Iseconds'
 alias timeNow='date +%H_%M_%S'
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/marc_cg/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
