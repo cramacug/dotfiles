@@ -30,14 +30,11 @@
       create: true
       path: vim/vimrc
       force: true
-    ~/.config/nvim/init.vim:
-      create: true
-      path: nvim/init.vim
+    # NVIM
+    ~/.config/nvim:
       force: true
-    ~/.config/nvim/init.lua:
       create: true
-      path: nvim/init.lua
-      force: true
+      path: nvim/config/nvim
     # ZSH
     ~/.zshrc:
       create: true
