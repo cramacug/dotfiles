@@ -7,15 +7,18 @@
 # iterm2.json
 
 - link:
-    ~/.ideavimrc:
-      create: true
-      path: ideavimrc
     ~/.config/htop/htoprc:
       create: true
       path: htoprc
+      force: true
     ~/.tmux.conf:
       create: true
       path: tmux.conf
+      force: true
+    ~/.ideavimrc:
+      create: true
+      path: ideavimrc
+      force: true
     # VIM
     ~/.vim/autoload: 
       create: true
@@ -26,22 +29,36 @@
     ~/.vimrc:
       create: true
       path: vim/vimrc
+      force: true
+    ~/.config/nvim/init.vim:
+      create: true
+      path: nvim/init.vim
+      force: true
+    ~/.config/nvim/init.lua:
+      create: true
+      path: nvim/init.lua
+      force: true
     # ZSH
     ~/.zshrc:
       create: true
       path: zsh/zshrc
+      force: true
     ~/.p10k.zsh:
       create: true
       path: zsh/p10k.zsh
+      force: true
     ~/.config/zsh/config.d/common:
       create: true
       path: zsh/zsh_configs/common
+      force: true
     ~/.config/zsh/config.d/macOS:
       create: true
       path: zsh/zsh_configs/macOS
+      force: true
     ~/.config/zsh/config.d/linux:
       create: true
       path: zsh/zsh_configs/linux
+      force: true
     # ~/.config/zsh/config.d/custom:
     #   create: true
     #   path: zsh/zsh_configs/custom

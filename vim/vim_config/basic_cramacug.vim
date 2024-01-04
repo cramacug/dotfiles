@@ -77,3 +77,6 @@ map <leader>[ <C-^>
 " Delay of vim to check the file
 set updatetime=100
 
+
+
+let g:highlightedyank_highlight_duration = 1000
