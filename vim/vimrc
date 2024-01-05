@@ -119,7 +119,8 @@ Plug 'tpope/vim-fugitive'
 "  TreeSitter
 "  https://github.com/nvim-treesitter/nvim-treesitter
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'PhilRunninger/nerdtree-visual-selection'
+" Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'PhilRunninger/nerdtree-visual-selection'
 
 " =============================================
 " ReplaceWithRegister

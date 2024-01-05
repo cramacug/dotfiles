@@ -45,6 +45,10 @@ nnoremap <F10> :set wrap! <CR>
 " --> F11
 " --> F12 :: Toogle paste when are importing text outside from the terminal
 :set pastetoggle=<F12>
+set paste
+
+" Align
+noremap == =ap 
 
 
 " =============================================
@@ -76,7 +80,5 @@ map gd :tabe <cfile><CR>
 map <leader>[ <C-^>
 " Delay of vim to check the file
 set updatetime=100
-
-
 
 let g:highlightedyank_highlight_duration = 1000

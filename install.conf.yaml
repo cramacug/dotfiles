@@ -35,6 +35,11 @@
       force: true
       create: true
       path: nvim/config/nvim
+    # VisualCode vimrc
+    ~/.vscodevimrc:
+      force: true
+      create: true
+      path: visualcode/vscodevimrc
     # ZSH
     ~/.zshrc:
       create: true
