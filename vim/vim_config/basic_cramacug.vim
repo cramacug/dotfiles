@@ -47,8 +47,6 @@ nnoremap <F10> :set wrap! <CR>
 :set pastetoggle=<F12>
 set paste
 
-" Align
-noremap == =ap 
 
 
 " =============================================
@@ -81,4 +79,7 @@ map <leader>[ <C-^>
 " Delay of vim to check the file
 set updatetime=100
 
+" Testing
 let g:highlightedyank_highlight_duration = 1000
+" Align
+" noremap == =ap 

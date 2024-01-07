@@ -45,14 +45,16 @@ Plug 'preservim/nerdtree'
 " NerdTreeGitPlugin
 " https://github.com/Xuyuanp/nerdtree-git-plugin
 Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
-            \ Plug 'ryanoasis/vim-devicons'
+			\ Plug 'Xuyuanp/nerdtree-git-plugin' |
+			\ Plug 'ryanoasis/vim-devicons'
 " https://github.com/ryanoasis/vim-devicons
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "
+Plug 'PhilRunninger/nerdtree-visual-selection'
 " =============================================
 " Git for NerdTree
 " https://github.com/airblade/vim-gitgutter
+
 Plug 'airblade/vim-gitgutter'
 
 " =============================================
@@ -120,7 +122,6 @@ Plug 'tpope/vim-fugitive'
 "  https://github.com/nvim-treesitter/nvim-treesitter
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-treesitter/nvim-treesitter'
-" Plug 'PhilRunninger/nerdtree-visual-selection'
 
 " =============================================
 " ReplaceWithRegister
@@ -136,6 +137,11 @@ Plug 'christoomey/vim-tmux-navigator'
 " Kotlin Syntax
 " https://vimawesome.com/plugin/kotlin-vim
 Plug 'udalov/kotlin-vim'
+
+" =============================================
+" Highlighted Yank
+" https://github.com/machakann/vim-highlightedyank
+Plug 'machakann/vim-highlightedyank'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 call plug#end()
@@ -159,6 +165,7 @@ source ~/.vim_config/vim_tmux_navigator.vim
 " source ~/.vim_config/syntastic.vim
 " source ~/.vim_config/coc_plugin.vim
 source ~/.vim_config/vim_fugitive.vim
+source ~/.vim_config/hightlighted_yank.vim
 
 source ~/.vim_config/test_configs.vim
 
