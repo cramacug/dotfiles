@@ -61,6 +61,11 @@
       create: true
       path: zsh/zsh_configs/linux
       force: true
+    # karabiner
+    ~/.config/karabiner/karabiner.json:
+      create: true
+      path: karabiner/karabiner.json
+    # force: true
     # ~/.config/zsh/config.d/custom:
     #   create: true
     #   path: zsh/zsh_configs/custom
