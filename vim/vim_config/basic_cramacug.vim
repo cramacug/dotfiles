@@ -47,6 +47,8 @@ nnoremap <F10> :set wrap! <CR>
 :set pastetoggle=<F12>
 set paste
 
+vnoremap p "_dP
+
 
 
 " =============================================

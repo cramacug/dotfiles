@@ -125,7 +125,7 @@ nnoremap <leader>e :action RecentFiles<CR>
 " nnoremap <leader>E :action SearchEverywhere<CR>
 
 " Macros"
-let @d='diw"0P'
+" let @d='diw"0P'
 
 " Plug 'vim-scripts/ReplaceWithRegister'
 " zR :action ExpandAllRegions<CR>:action ExpandAllRegions<CR>
