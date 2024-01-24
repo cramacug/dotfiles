@@ -3,7 +3,7 @@
 " ========
 vnoremap <leader>y "*y
 nnoremap <leader>y "*y
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 " =============================================
 " YANK UNTIL EOL
