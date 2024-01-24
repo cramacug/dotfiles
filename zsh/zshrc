@@ -200,5 +200,5 @@ alias todayISO='date -Iseconds'
 alias timeNow='date +%H_%M_%S'
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/marc_cg/.rd/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
