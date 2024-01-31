@@ -1,9 +1,19 @@
 " =============================================
+" Reload configuration
+" ========
+" vnoremap <leader><space> :source ~/.vimrc
+" Edit vimr configuration file
+nnoremap <leader>ve :e ~/.vimrc<CR>
+" " Reload vimr configuration file
+nnoremap <leader>vr :source ~/.vimrc<CR>
+
+" =============================================
 " USE SYSTEM CLIPPBOARD
 " ========
 vnoremap <leader>y "*y
 nnoremap <leader>y "*y
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
+set clipboard=unnamed
 
 " =============================================
 " YANK UNTIL EOL
