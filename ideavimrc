@@ -85,18 +85,18 @@ map <leader>F :action GotoFile<CR>
 " Move along tabs and windows
 "
 " ................................................
-map <leader>> :tabmove +1<CR>
-map <leader>< :tabmove -1<CR>
+" map <leader>> :tabmove +1<CR>
+" map <leader>< :tabmove -1<CR>
 " Go to tab by number
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
+" noremap <leader>1 1gt
+" noremap <leader>2 2gt
+" noremap <leader>3 3gt
+" noremap <leader>4 4gt
+" noremap <leader>5 5gt
+" noremap <leader>6 6gt
+" noremap <leader>7 7gt
+" noremap <leader>8 8gt
+" noremap <leader>9 9gt
 
 
 " Overwrite window movements to avoid collision with vim/tmux plugin
@@ -117,17 +117,15 @@ map <C-l> <C-W>l
 " Rename
 " ................................................
 map <leader>rn :action RenameElement<CR>
+map <leader>R :action RenameElement<CR>
 " ................................................
 " Run and debugging
 " ................................................
-            Mockito.verify(trackingLogBookRepositoryUsingGoogle, Mockito.times(1))
-
-            Mockito.verify(trackingLogBookRepositoryUsingGoogle, Mockito.times(1))
 map <leader>r :action Run<CR>
-map <leader>R :action RunClass<CR>
+map <leader>RR :action RunClass<CR>
 map <leader>d :action Debug<CR>
-map <leader>D :action DebugClass<CR>
-map <leader>rc :action RunCoverage<CR>
+map <leader>DD :action DebugClass<CR>
+map <leader>RC :action RunCoverage<CR>
 " Add a Breakpoint
 map <leader>bk :action ToggleLineBreakpoint<CR>
 " Mute a breakpoints
