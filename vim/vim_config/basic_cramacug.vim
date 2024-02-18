@@ -45,7 +45,8 @@ noremap <F3> :set hlsearch!<CR>
 " --> F4  :: Show/hide realitive numbers
 set nu relativenumber
 noremap <F4> :set nu! relativenumber!<CR>
-" --> F5
+" --> F5 :: Execute the code
+" map <F5> :!%:p<Cr>
 " --> F6
 " --> F7
 " --> F8
@@ -56,9 +57,13 @@ nnoremap <F10> :set wrap! <CR>
 " --> F12 :: Toogle paste when are importing text outside from the terminal
 :set pastetoggle=<F12>
 set paste
+" =============================================
 
 vnoremap p "_dP
 
+" Run the code
+nnoremap <leader>r :!"%:p"<Cr>
+" nnoremap <leader>d :!"%:p"<Cr>
 
 
 " =============================================
