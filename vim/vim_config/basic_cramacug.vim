@@ -63,7 +63,7 @@ vnoremap p "_dP
 
 " Run the code
 nnoremap <leader>r :!"%:p"<Cr>
-" nnoremap <leader>d :!"%:p"<Cr>
+nnoremap <leader>s :!chmod +x %:p<Cr>
 
 
 " =============================================
