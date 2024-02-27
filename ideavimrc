@@ -122,10 +122,10 @@ map <leader>R :action RenameElement<CR>
 " Run and debugging
 " ................................................
 map <leader>r :action Run<CR>
-map <leader>RR :action RunClass<CR>
+map <leader>rr :action RunClass<CR>
 map <leader>d :action Debug<CR>
-map <leader>DD :action DebugClass<CR>
-map <leader>RC :action RunCoverage<CR>
+map <leader>dd :action DebugClass<CR>
+map <leader>rc :action RunCoverage<CR>
 " Add a Breakpoint
 map <leader>bk :action ToggleLineBreakpoint<CR>
 " Mute a breakpoints
