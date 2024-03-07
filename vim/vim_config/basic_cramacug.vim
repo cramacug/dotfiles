@@ -96,5 +96,18 @@ map <leader>[ <C-^>
 " Delay of vim to check the file
 set updatetime=100
 
+
 " Testing
 " map <leader>g :grep -iER %:p:h/*
+
+" VimDiff
+
+if &diff
+    set cursorline
+    map ] ]c
+    map [ [c
+    " hi DiffAdd    ctermfg=233 ctermbg=LightGreen guifg=#003300 guibg=#DDFFDD gui=none cterm=none
+    " hi DiffChange ctermbg=white  guibg=#ececec gui=none   cterm=none
+    " hi DiffText   ctermfg=233  ctermbg=yellow  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
+endif
+
