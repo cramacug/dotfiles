@@ -148,6 +148,9 @@ nnoremap <leader>a :action GotoAction<CR>
 nnoremap <leader>e :action RecentFiles<CR>
 " nnoremap <leader>E :action SearchEverywhere<CR>
 
+" Open terminal
+nnoremap <leader>T :action ActivateTerminalToolWindow<CR>
+
 " Macros"
 " let @d='diw"0P'
 
