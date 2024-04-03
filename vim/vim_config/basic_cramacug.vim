@@ -61,6 +61,9 @@ set paste
 
 vnoremap p "_dP
 
+" Run an action, like IntelliJ
+nnoremap <leader>a :
+
 " Run the code
 nnoremap <leader>r :!"%:p"<Cr>
 nnoremap <leader>s :!chmod +x %:p<Cr>
@@ -93,6 +96,7 @@ map gd :tabe <cfile><CR>
 " Navigation
 " ========
 map <leader>[ <C-^>
+
 " Delay of vim to check the file
 set updatetime=100
 
