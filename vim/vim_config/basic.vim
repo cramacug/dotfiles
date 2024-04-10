@@ -183,6 +183,9 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Close a tab
+map <leader>q :q <CR>
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -345,13 +348,13 @@ map <leader>s? z=
 noremap <Leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
 
 " Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<CR>
+" map <leader>q :e ~/buffer<CR>
 
 " Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<CR>
+" map <leader>x :e ~/buffer.md<CR>
 
 " Toggle paste mode on and off
-map <leader>pp :setlocal paste!<CR>
+" map <leader>pp :setlocal paste!<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
