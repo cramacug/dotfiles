@@ -199,6 +199,8 @@ alias today='date +%Y_%m_%d'
 alias todayISO='date -Iseconds'
 alias timeNow='date +%H_%M_%S'
 
+alias ll='ls -lh -D "%Y-%m-%d %H:%m:%S"'
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
