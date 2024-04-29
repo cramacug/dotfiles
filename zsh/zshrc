@@ -189,10 +189,6 @@ export EDITOR="$VISUAL"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Python
-alias cvenv='python3 -m venv .venv'
-alias avenv='source .venv/bin/activate'
-
 # MISC
 alias pingg='ping www.google.com'
 alias today='date +%Y_%m_%d'
