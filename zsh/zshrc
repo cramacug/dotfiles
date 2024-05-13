@@ -188,6 +188,9 @@ export EDITOR="$VISUAL"
 # FZF
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# zsh
+eval "$(fzf --zsh)"
+
 
 # MISC
 alias pingg='ping www.google.com'
@@ -200,5 +203,5 @@ alias ll='ls -lho -D "%F %T"'
 alias llf='ls -lh -D "%F %T"'
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="$HOME/.rd/bin:$PATH"
+# export PATH="/Users/marc_cg/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

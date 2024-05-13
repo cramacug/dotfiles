@@ -115,3 +115,6 @@ if &diff
     " hi DiffText   ctermfg=233  ctermbg=yellow  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
 endif
 
+" zsh
+set rtp+=/usr/local/opt/fzf
+

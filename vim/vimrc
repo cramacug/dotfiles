@@ -115,7 +115,7 @@ Plug 'tpope/vim-fugitive'
 " =============================================
 " Vim coc
 " https://github.com/neoclide/coc.nvim
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " =============================================
 "  TreeSitter
