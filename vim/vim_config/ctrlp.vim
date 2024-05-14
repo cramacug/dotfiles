@@ -4,7 +4,7 @@
 
 " Quickly find and open a file in the current working directory
 " let g:ctrlp_working_path_mode = 0
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_map = '<C-f>'
 map <leader>o :CtrlP<CR>
 
