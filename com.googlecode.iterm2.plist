@@ -10,6 +10,8 @@
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>ClickToSelectCommand</key>
+	<false/>
 	<key>Default Bookmark Guid</key>
 	<string>DE18BE5F-1758-488D-A1BB-80C5A9019B0B</string>
 	<key>DimInactiveSplitPanes</key>
@@ -876,6 +878,8 @@
 			<string>No</string>
 			<key>Custom Directory</key>
 			<string>No</string>
+			<key>Custom Locale</key>
+			<string>en_US.UTF-8</string>
 			<key>Custom Tab Title</key>
 			<string></string>
 			<key>Default Bookmark</key>
@@ -1260,6 +1264,10 @@
 			<integer>0</integer>
 			<key>Scrollback Lines</key>
 			<integer>0</integer>
+			<key>Scrollback With Status Bar</key>
+			<false/>
+			<key>Scrollback in Alternate Screen</key>
+			<false/>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1289,6 +1297,8 @@
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
+			<key>Set Local Environment Vars</key>
+			<integer>1</integer>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Status Bar</key>
@@ -2759,6 +2769,8 @@
 	<false/>
 	<key>StretchTabsToFillBar</key>
 	<false/>
+	<key>TabStyleWithAutomaticOption</key>
+	<integer>4</integer>
 	<key>TabsHaveCloseButton</key>
 	<false/>
 	<key>TerminalMargin</key>
