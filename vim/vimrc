@@ -166,6 +166,7 @@ source ~/.vim_config/vim_tmux_navigator.vim
 " source ~/.vim_config/coc_plugin.vim
 source ~/.vim_config/vim_fugitive.vim
 source ~/.vim_config/hightlighted_yank.vim
+source ~/.vim_config/vim_log.vim
 
 source ~/.vim_config/test_configs.vim
 

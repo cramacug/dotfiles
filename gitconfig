@@ -1,0 +1,19 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+# $ git config --global user.name "John Doe"
+# $ git config --global user.email johndoe@example.com
+name = 
+email = 
+# git config --global core.editor vim
+[core]
+	editor = vim
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true
+# git config --global remote.origin.prune true
+[remote "origin"]
+	prune = true
+
+
