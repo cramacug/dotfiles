@@ -116,16 +116,21 @@ map <C-l> <C-W>l
 " ................................................
 " Rename
 " ................................................
-map <leader>rn :action RenameElement<CR>
 map <leader>R :action RenameElement<CR>
 " ................................................
 " Run and debugging
 " ................................................
 map <leader>r :action Run<CR>
-map <leader>rr :action RunClass<CR>
+" Run a test o launch an application
+map <leader>rt :action RunClass<CR>
+
 map <leader>d :action Debug<CR>
-map <leader>dd :action DebugClass<CR>
+" Does not work as RunClass
+map <leader>dt :action DebugClass<CR>
+map <leader>rr :action Rerun<CR>
+
 map <leader>rc :action RunCoverage<CR>
+
 " Add a Breakpoint
 map <leader>bk :action ToggleLineBreakpoint<CR>
 " Mute a breakpoints
