@@ -183,6 +183,9 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Close a tab
+map <leader>q :q <CR>
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -298,11 +301,6 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<CR>`z
-nmap <M-k> mz:m-2<CR>`z
-vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
 
 if has("mac") || has("macunix")
   nmap <D-j> <M-j>
@@ -311,126 +309,22 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
-" Delete trailing white space on save, useful for some filetypes ;)
-fun! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
+" =============================================
+" Reload configuration
+" ========
+" vnoremap <leader><space> :source ~/.vimrc
+" Edit vimr configuration file
+nnoremap <leader>ve :e ~/.vimrc<CR>
+" " Reload vimr configuration file
+nnoremap <leader>vr :source ~/.vimrc<CR>
 
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<CR>
-
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Misc
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
-
-" Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<CR>
-
-" Quickly open a markdown buffer for scribble
-map <leader>x :e ~/buffer.md<CR>
-
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
-
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-    let l:currentBufNum = bufnr("%")
-    let l:alternateBufNum = bufnr("#")
-
-    if buflisted(l:alternateBufNum)
-        buffer #
-    else
-        bnext
-    endif
-
-    if bufnr("%") == l:currentBufNum
-        new
-    endif
-
-nnoremap <leader>E :action SearchEverywhere<CR>
-    if buflisted(l:currentBufNum)
-        execute("bdelete! ".l:currentBufNum)
-    endif
-endfunction
-
-function! CmdLine(str)
-    call feedkeys(":" . a:str)
-endfunction 
-
-function! VisualSelection(direction, extra_filter) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", "\\/.*'$^~[]")
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-"
-""""""""""""""""""""""""""""""
-" => ZenCoding
-""""""""""""""""""""""""""""""
-" Enable all functions in all modes
-let g:user_zen_mode='a'
-
-""""""""""""""""""""""""""""""
-" => snipMate (beside <TAB> support <CTRL-j>)
-""""""""""""""""""""""""""""""
-ino <C-j> <C-r>=snipMate#TriggerSnippet()<CR>
-snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<CR>
-
-""""""""""""""""""""""""""""""
-" => Vim grep
-""""""""""""""""""""""""""""""
-let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
-set grepprg=/bin/grep\ -nH
 " =============================================
 " USE SYSTEM CLIPPBOARD
 " ========
 vnoremap <leader>y "*y
 nnoremap <leader>y "*y
 " set clipboard=unnamedplus
+set clipboard=unnamed
 
 " =============================================
 " YANK UNTIL EOL
@@ -462,7 +356,8 @@ noremap <F3> :set hlsearch!<CR>
 " --> F4  :: Show/hide realitive numbers
 set nu relativenumber
 noremap <F4> :set nu! relativenumber!<CR>
-" --> F5
+" --> F5 :: Execute the code
+" map <F5> :!%:p<Cr>
 " --> F6
 " --> F7
 " --> F8
@@ -473,9 +368,16 @@ nnoremap <F10> :set wrap! <CR>
 " --> F12 :: Toogle paste when are importing text outside from the terminal
 :set pastetoggle=<F12>
 set paste
+" =============================================
 
-" Align
-noremap == =ap <CR>
+vnoremap p "_dP
+
+" Run an action, like IntelliJ
+nnoremap <leader>a :
+
+" Run the code
+nnoremap <leader>r :!"%:p"<Cr>
+nnoremap <leader>s :!chmod +x %:p<Cr>
 
 
 " =============================================
@@ -505,7 +407,25 @@ map gd :tabe <cfile><CR>
 " Navigation
 " ========
 map <leader>[ <C-^>
+
 " Delay of vim to check the file
 set updatetime=100
 
-let g:highlightedyank_highlight_duration = 1000
+
+" Testing
+" map <leader>g :grep -iER %:p:h/*
+
+" VimDiff
+
+if &diff
+    set cursorline
+    map ] ]c
+    map [ [c
+    " hi DiffAdd    ctermfg=233 ctermbg=LightGreen guifg=#003300 guibg=#DDFFDD gui=none cterm=none
+    " hi DiffChange ctermbg=white  guibg=#ececec gui=none   cterm=none
+    " hi DiffText   ctermfg=233  ctermbg=yellow  guifg=#000033 guibg=#DDDDFF gui=none cterm=none
+endif
+
+" zsh
+set rtp+=/usr/local/opt/fzf
+
